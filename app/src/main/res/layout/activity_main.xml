@@ -10,6 +10,7 @@
         android:id="@+id/playerOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#636366"
         android:layout_margin="20dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
@@ -23,13 +24,168 @@
         android:id="@+id/playerOneScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#636366"
+        android:layout_marginTop="12dp"
         android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/playerOne"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25dp"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintStart_toStartOf="@+id/playerOne"
+        app:layout_constraintTop_toBottomOf="@+id/playerOne" />
+
+    <TextView
+        android:id="@+id/playerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#636366"
+        android:layout_margin="20dp"
+        android:text="Player Two"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#636366"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textSize="25dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/playerTwo"
+        app:layout_constraintTop_toBottomOf="@+id/playerTwo" />
+
+    <TextView
+        android:id="@+id/playerWinning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Current Winner: "
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneScore" />'
+
+    <!-- GRID STARTS HERE-->
+<!--    Row 1 -->
+    <Button
+        android:id="@+id/cell_0x0"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"
-        />
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerWinning" />
 
+    <Button
+        android:id="@+id/cell_0x1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cell_0x0"
+        app:layout_constraintTop_toBottomOf="@+id/playerWinning" />
+
+    <Button
+        android:id="@+id/cell_0x2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cell_0x1"
+        app:layout_constraintTop_toBottomOf="@+id/playerWinning" />
+
+<!--    Row 2-->
+    <Button
+        android:id="@+id/cell_1x0"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cell_0x1" />
+
+    <Button
+        android:id="@+id/cell_1x1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cell_0x0"
+        app:layout_constraintTop_toBottomOf="@+id/cell_0x1" />
+
+    <Button
+        android:id="@+id/cell_1x2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cell_0x1"
+        app:layout_constraintTop_toBottomOf="@+id/cell_0x1" />
+<!--    Row 3-->
+
+    <Button
+        android:id="@+id/cell_2x0"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cell_1x1" />
+
+    <Button
+        android:id="@+id/cell_2x1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cell_0x0"
+        app:layout_constraintTop_toBottomOf="@+id/cell_1x1" />
+
+    <Button
+        android:id="@+id/cell_2x2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#e5e5ea"
+        android:textColor="#636366"
+        android:textSize="70dp"
+        app:layout_constraintStart_toEndOf="@+id/cell_0x1"
+        app:layout_constraintTop_toBottomOf="@+id/cell_1x1" />
+<!--    END OF GRID-->
+
+
+
+        <!-- Reset Game Btn-->
+    <Button
+        android:id="@+id/btn_ResetGame"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#2c2c2e"
+        android:textColor="@color/white"
+        android:text="Reset Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cell_2x1"
+        tools:layout_editor_absoluteX="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
